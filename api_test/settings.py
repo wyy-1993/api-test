@@ -63,6 +63,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.static',
             ],
         },
     },
@@ -70,7 +71,7 @@ TEMPLATES = [
 
 # Add for vue.js
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,"frontend/dist/static")
+    os.path.join(BASE_DIR,"frontend/dist/static"),
 ]
 
 WSGI_APPLICATION = 'api_test.wsgi.application'
@@ -123,4 +124,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"

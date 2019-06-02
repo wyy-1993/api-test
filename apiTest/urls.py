@@ -20,7 +20,7 @@ from django.views.generic.base import TemplateView
 
 app_name = 'apiTest'
 urlpatterns = [
-    path('', TemplateView.as_view(template_name="index.html")),
+    path(r'', TemplateView.as_view(template_name="index.html")),
     path('login_action',lg.login_action,name='login_action'),
     path('debug/',dbg.debug,name='debug')
 ]
