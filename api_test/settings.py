@@ -55,7 +55,7 @@ ROOT_URLCONF = 'api_test.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['frontend/dist'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -66,6 +66,11 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+# Add for vue.js
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,"frontend/dist/static")
 ]
 
 WSGI_APPLICATION = 'api_test.wsgi.application'
