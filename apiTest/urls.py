@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.views.generic.base import TemplateView
+from . import views_case as cs
 
-app_name='apiTest'
+app_name = 'apiTest'
 urlpatterns = [
-    path(r'',TemplateView.as_view(template_name='index.html')),
+    path(r'', cs.index, name='testcase'),
     # path(r'apiTest/', TemplateView.as_view(template_name="index.html")),
-    path(r'login/', TemplateView.as_view(template_name='login.html')),
+    # path(r'login/', TemplateView.as_view(template_name='login.html')),
 ]
